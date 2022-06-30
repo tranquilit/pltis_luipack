@@ -73,7 +73,7 @@ type
     procedure SetOptions(const AValue: TToggleLabelOptions);
   protected
     procedure DoMeasureTextPosition(var TextTop: integer;
-      var TextLeft: integer); override;
+      var TextLeft: integer); {$IFNDEF VER3_2}override;{$ENDIF}
     procedure FontChanged(Sender: TObject); override;
     function GetLabelText: string; override;
     procedure MouseEnter; override;
